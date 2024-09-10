@@ -1,0 +1,141 @@
+body {
+  background-color: bisque;
+}
+
+
+.container {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  margin: 20px auto;
+  width: 310px;
+  background-color: rgb(54, 47, 60);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+
+
+.board:hover {
+  background-color: rgb(54, 47, 60);
+  grid-gap: 15px;
+  width: 330px;
+}
+
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid burlywood;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: rotateAnimation 1s ease-in-out, shadowAnimation 1s linear forwards; 
+
+}
+
+.cell:hover {
+  width: 104px;
+  height: 104px;
+  background-color: moccasin;
+  border: 2px solid burlywood;
+  cursor: pointer;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+
+.restart__button {
+  font-size: 16px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  color: #ffffff; 
+  background-image: linear-gradient(to bottom, #ff7b00, #000000);
+  border: none;
+  border-radius: 5%;
+  padding: 10px 20px; 
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  transition: background-color 0.5s ease-in; 
+}
+
+
+.restart__button:hover {
+  background-image: linear-gradient(to bottom, #000000, #ff7b00); 
+}
+
+.restart__button:focus {
+  box-shadow: 0 0 10px #ff9500; 
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.restart__button.animated {
+  animation: pulse 1s infinite; 
+}
+
+
+h1 {
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(160, 160, 160);
+  font-size: 36px;
+  text-align: center;
+  animation: animateTitle 2s infinite alternate;
+}
+@keyframes animateTitle {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
